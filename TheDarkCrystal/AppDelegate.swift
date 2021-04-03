@@ -69,10 +69,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splitViewController.preferredDisplayMode = .allVisible
         splitViewController.viewControllers = [tabBarController, storiesDetailViewControllerNavigagion]
         
-//        [storiesDetailViewController, raceDetailViewController].forEach {
-//            $0?.navigationController?.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-//        }
-        
         window?.rootViewController =  splitViewController
         
         return true
