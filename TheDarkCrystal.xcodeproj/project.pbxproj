@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C02D8752562F1E80061CC1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02D8742562F1E80061CC1A /* AppDelegate.swift */; };
-		4C02D8772562F1E80061CC1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02D8762562F1E80061CC1A /* SceneDelegate.swift */; };
 		4C02D8792562F1E80061CC1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02D8782562F1E80061CC1A /* ViewController.swift */; };
 		4C02D87E2562F1E90061CC1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C02D87D2562F1E90061CC1A /* Assets.xcassets */; };
 		4C02D8812562F1E90061CC1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C02D87F2562F1E90061CC1A /* LaunchScreen.storyboard */; };
@@ -57,7 +56,6 @@
 /* Begin PBXFileReference section */
 		4C02D8712562F1E80061CC1A /* TheDarkCrystal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheDarkCrystal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C02D8742562F1E80061CC1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C02D8762562F1E80061CC1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4C02D8782562F1E80061CC1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C02D87D2562F1E90061CC1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C02D8802562F1E90061CC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 		4C02D8732562F1E80061CC1A /* TheDarkCrystal */ = {
 			isa = PBXGroup;
 			children = (
-				4C02D8762562F1E80061CC1A /* SceneDelegate.swift */,
 				4C02D8742562F1E80061CC1A /* AppDelegate.swift */,
 				4C02D8782562F1E80061CC1A /* ViewController.swift */,
 				4C02D87D2562F1E90061CC1A /* Assets.xcassets */,
@@ -370,7 +367,6 @@
 				4C857F5E2567126600D8DB85 /* CharacterDetailViewController.swift in Sources */,
 				4C39945025682BA0002BAFFE /* EpisodesTableViewController.swift in Sources */,
 				4C857F2F2566E04A00D8DB85 /* UIViewController+Navigation.swift in Sources */,
-				4C02D8772562F1E80061CC1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
