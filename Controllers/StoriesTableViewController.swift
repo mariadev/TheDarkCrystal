@@ -16,7 +16,7 @@ protocol StoriesListViewControllerDelegate: class {
 class StoriesTableViewController: UITableViewController {
     
     let model: [Story]
-    var delegate: StoriesListViewControllerDelegate?
+    weak var delegate: StoriesListViewControllerDelegate?
     
     init(model: [Story]) {
         self.model = model
@@ -67,8 +67,7 @@ class StoriesTableViewController: UITableViewController {
         
         let imageR = story.image
         cell?.imageView?.image = imageR.imageWithSize(size: CGSize(width: 70, height: 90))
-        
-     
+
         // return cell
         return cell!
     }
@@ -91,7 +90,6 @@ class StoriesTableViewController: UITableViewController {
         saveLastSelectedStory(at: indexPath.row)
     }
 }
-
 
 extension StoriesTableViewController {
     func saveLastSelectedStory(at index: Int) {

@@ -9,7 +9,7 @@ import Foundation
 
 struct SetDate {
     
-    func stringToDate (for date:String) -> Date {
+    func stringToDate (for date: String) -> Date {
         let stringDate = date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -21,7 +21,7 @@ struct SetDate {
         return releaseDate
     }
     
-    func dateToString (for date:Date) -> String {
+    func dateToString (for date: Date) -> String {
         let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: date)

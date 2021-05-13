@@ -54,7 +54,7 @@ class StoriesDetailViewController: UIViewController {
         descriptionStory.text = model.plot
         dateLabel.text = dateString
         
-        if model._episodes.count > 0 {
+        if !model._episodes.isEmpty {
             setUpUI()
         }
     }
@@ -72,18 +72,15 @@ class StoriesDetailViewController: UIViewController {
         let array = Array(model._episodes.sorted())
         let episodesViewController = EpisodesTableViewController(model: array)
         
-        navigationController?.pushViewController(episodesViewController , animated: true)
+        navigationController?.pushViewController(episodesViewController, animated: true)
     }
-    
-    
+
 }
 
-extension StoriesDetailViewController : StoriesListViewControllerDelegate {
+extension StoriesDetailViewController: StoriesListViewControllerDelegate {
     
     func storiesListViewController(_ viewController: StoriesTableViewController, didSelectStory story: Story) {
         self.model = story
         syncModelWithView()
     }
 }
-
-

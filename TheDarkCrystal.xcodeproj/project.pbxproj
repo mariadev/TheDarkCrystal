@@ -18,6 +18,7 @@
 		4C02D8E7256306830061CC1A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02D8E6256306830061CC1A /* Character.swift */; };
 		4C02D8EC25630A910061CC1A /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02D8EB25630A910061CC1A /* Race.swift */; };
 		4C02D90B25631A3A0061CC1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02D90A25631A3A0061CC1A /* Constants.swift */; };
+		4C0C1159264DA4D600558EA2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C0C1158264DA4D600558EA2 /* .swiftlint.yml */; };
 		4C39943C256808A3002BAFFE /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39943B256808A3002BAFFE /* ResizeImage.swift */; };
 		4C39945025682BA0002BAFFE /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39944E25682BA0002BAFFE /* EpisodesTableViewController.swift */; };
 		4C39945125682BA0002BAFFE /* EpisodesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C39944F25682BA0002BAFFE /* EpisodesTableViewController.xib */; };
@@ -72,6 +73,7 @@
 		4C02D8F325630D570061CC1A /* CharacterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTest.swift; sourceTree = "<group>"; };
 		4C02D8FB25630D6B0061CC1A /* RaceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTest.swift; sourceTree = "<group>"; };
 		4C02D90A25631A3A0061CC1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4C0C1158264DA4D600558EA2 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4C39943B256808A3002BAFFE /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
 		4C39944E25682BA0002BAFFE /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
 		4C39944F25682BA0002BAFFE /* EpisodesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesTableViewController.xib; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		4C02D8682562F1E80061CC1A = {
 			isa = PBXGroup;
 			children = (
+				4C0C1158264DA4D600558EA2 /* .swiftlint.yml */,
 				4C02D8732562F1E80061CC1A /* TheDarkCrystal */,
 				4C02D90925631A2A0061CC1A /* Extensions */,
 				4C02D8AB2562F7650061CC1A /* LocalData */,
@@ -230,6 +233,7 @@
 				4C02D86D2562F1E80061CC1A /* Sources */,
 				4C02D86E2562F1E80061CC1A /* Frameworks */,
 				4C02D86F2562F1E80061CC1A /* Resources */,
+				4C0C1157264DA49600558EA2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -300,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0C1159264DA4D600558EA2 /* .swiftlint.yml in Resources */,
 				4C02D8812562F1E90061CC1A /* LaunchScreen.storyboard in Resources */,
 				4C02D87E2562F1E90061CC1A /* Assets.xcassets in Resources */,
 				4CB2B1222565A00400D5425B /* StoriesTableViewController.xib in Resources */,
@@ -320,6 +325,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C0C1157264DA49600558EA2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C02D86D2562F1E80061CC1A /* Sources */ = {

@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 extension UIImage {
     
     func resizeImage(_ dimension: CGFloat, opaque: Bool, contentMode: UIView.ContentMode = .scaleAspectFit) -> UIImage {
@@ -36,8 +35,7 @@ extension UIImage {
             let renderFormat = UIGraphicsImageRendererFormat.default()
             renderFormat.opaque = opaque
             let renderer = UIGraphicsImageRenderer(size: CGSize(width: width, height: height), format: renderFormat)
-            newImage = renderer.image {
-                (context) in
+            newImage = renderer.image {(_) in
                 self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
             }
         } else {
@@ -50,15 +48,13 @@ extension UIImage {
         return newImage
     }
     
-    func imageWithSize(size:CGSize) -> UIImage
-    {
+    func imageWithSize(size: CGSize) -> UIImage {
         var scaledImageRect = CGRect.zero
         
-        let aspectWidth:CGFloat = size.width / self.size.width
-        let aspectHeight:CGFloat = size.height / self.size.height
+        let aspectWidth: CGFloat = size.width / self.size.width
+        let aspectHeight: CGFloat = size.height / self.size.height
         
-        //max - scaleAspectFill | min - scaleAspectFit
-        let aspectRatio:CGFloat = max(aspectWidth, aspectHeight)
+        let aspectRatio: CGFloat = max(aspectWidth, aspectHeight)
         
         scaledImageRect.size.width = self.size.width * aspectRatio
         scaledImageRect.size.height = self.size.height * aspectRatio

@@ -12,7 +12,7 @@ class StoryTest: XCTestCase {
     
     struct SetDate {
         
-        func stringToDate (for date:String) -> Date {
+        func stringToDate (for date: String) -> Date {
             let stringDate = date
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -33,8 +33,8 @@ class StoryTest: XCTestCase {
         let movieDate = date.stringToDate(for: "1982-12-13")
         let seriesDate = date.stringToDate(for: "2019-08-30")
         
-        movie = Story(name: "The Dark Crystal", plot: PLOT_MOVIE, type: TYPE_OF_STORY.film, releaseDate:  movieDate, image: UIImage(named: "dark-cristal-movie.jpg")! )
-        serie = Story(name: "The Dark Crystal: Age of Resistance ", plot: PLOT_SERIES, type: TYPE_OF_STORY.serie, releaseDate: seriesDate ,  image: UIImage(named: "dark-cristal-series.jpg")!)
+        movie = Story(name: "The Dark Crystal", plot: PLOT_MOVIE, type: TYPE_OF_STORY.film, releaseDate: movieDate, image: UIImage(named: "dark-cristal-movie.jpg")! )
+        serie = Story(name: "The Dark Crystal: Age of Resistance ", plot: PLOT_SERIES, type: TYPE_OF_STORY.serie, releaseDate: seriesDate, image: UIImage(named: "dark-cristal-series.jpg")!)
         
         let episode1 = Episode(name: "End. Begin. All the Same", number: 1, story: serie )
         let episode2 = Episode(name: "Nothing Is Simple Anymore", number: 2, story: serie )
@@ -45,9 +45,9 @@ class StoryTest: XCTestCase {
         let episode7 = Episode(name: "Time to Make...My Move.", number: 7, story: serie )
         let episode8 = Episode(name: "Prophets Don't Know Everything", number: 8, story: serie)
         let episode9 = Episode(name: "The Crystal Calls", number: 9, story: serie)
-        let episode10 = Episode(name: "A Single Piece Was Lost", number:10, story: serie )
+        let episode10 = Episode(name: "A Single Piece Was Lost", number: 10, story: serie )
         
-        let arrayEpisodes = [episode1,episode2,episode1,episode3,episode4,episode5,episode6,episode7, episode8, episode9, episode10]
+        let arrayEpisodes = [episode1, episode2, episode1, episode3, episode4, episode5, episode6, episode7, episode8, episode9, episode10]
         
         serie.add(episodes: arrayEpisodes)
     }
@@ -65,7 +65,7 @@ class StoryTest: XCTestCase {
         XCTAssertNotNil(serie)
     }
     
-    func testStory()  {
+    func testStory() {
         XCTAssertEqual(serie, serie)
         XCTAssertNotEqual(serie, movie)
         
@@ -75,7 +75,7 @@ class StoryTest: XCTestCase {
         XCTAssertEqual(serie._episodes.count, 10)
     }
     
-    func testSortedByNumber()  {
+    func testSortedByNumber() {
         XCTAssertEqual(serie.sortedEpisodes, serie.sortedEpisodes.sorted())
         print(serie.sortedEpisodes)
         

@@ -7,16 +7,14 @@
 
 import UIKit
 
-
-
 final class Character {
     
-    let race : Race
+    let race: Race
     let name: String
     let image: UIImage
     let description: String
-    let appearOn : String
-    let aphorism : String
+    let appearOn: String
+    let aphorism: String
     
     init(name: String, race: Race, image: UIImage, description: String, appearOn: String, aphorism: String) {
         self.name = name
@@ -29,8 +27,6 @@ final class Character {
     }
     
 }
-
-
 
 extension Character {
     var proxyForEquality: String {
@@ -47,7 +43,7 @@ extension Character: Hashable {
   }
 }
 
-extension Character : Equatable {
+extension Character: Equatable {
     static func == (lhs: Character, rhs: Character) -> Bool {
         return lhs.proxyForEquality == rhs.proxyForEquality
     }
@@ -58,4 +54,3 @@ extension Character: Comparable {
         return lhs.proxyForComparison < rhs.proxyForComparison
     }
 }
-

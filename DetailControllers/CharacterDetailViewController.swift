@@ -43,8 +43,7 @@ class CharacterDetailViewController: UIViewController {
         syncModelWithView()
         
     }
-    
-    
+        
     @objc func raceDidChange(notification: Notification) {
 
         navigationController?.popToRootViewController(animated: true)

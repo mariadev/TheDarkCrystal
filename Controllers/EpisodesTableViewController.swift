@@ -27,8 +27,7 @@ class EpisodesTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+
         let notificationCenter = NotificationCenter.default
 //        
         notificationCenter.addObserver(self,
@@ -43,10 +42,8 @@ class EpisodesTableViewController: UITableViewController {
         navigationController?.popToRootViewController(animated: true)
     }
 
-
     // MARK: - Table view data source
 
-  
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -56,7 +53,6 @@ class EpisodesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return model.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -82,8 +78,5 @@ class EpisodesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
-    
 
-    
 }
-

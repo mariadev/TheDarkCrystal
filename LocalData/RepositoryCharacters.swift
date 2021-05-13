@@ -11,12 +11,9 @@ final class RepositoryCharacters {
     static let local = LocalFactoryCharacters()
 }
 
-
 protocol RepositoryCharactersFactory {
     var races: [Race] {get}
 }
-
-
 
 final class LocalFactoryCharacters: RepositoryCharactersFactory {
     
@@ -32,11 +29,10 @@ final class LocalFactoryCharacters: RepositoryCharactersFactory {
                           description: DESCRIPTION_AUGHRA)
         let mystics = Race(name: OF_RACE.mystics,
                            description: DESCRIPTION_MYSTICS)
-        
-        
+
         let rian = Character(name: RIAN_DATA.name,
                              race: gelfings,
-                             image: UIImage(named:RIAN_DATA.image)!,
+                             image: UIImage(named: RIAN_DATA.image)!,
                              description: RIAN_DATA.description,
                              appearOn: RIAN_DATA.appearOn,
                              aphorism: RIAN_DATA.aphorism)
@@ -75,12 +71,9 @@ final class LocalFactoryCharacters: RepositoryCharactersFactory {
                              description: DEET_DATA.description,
                              appearOn: DEET_DATA.appearOn,
                              aphorism: DEET_DATA.aphorism)
-        
-        
-        let arrayCharacters = [rian, motherAughra, skekso, urgoh, hop, deet]
-        
-        gelfings.add(character: deet)
-        gelfings.add(character: rian)
+
+        let charactersGelfings = [rian, deet]
+        charactersGelfings.forEach { gelfings.add(character: $0)}
         aughra.add(character: motherAughra)
         skeksis.add(character: skekso)
         mystics.add(character: urgoh)
@@ -90,4 +83,3 @@ final class LocalFactoryCharacters: RepositoryCharactersFactory {
     }
 
 }
-

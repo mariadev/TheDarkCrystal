@@ -18,7 +18,7 @@ class EpisodeTest: XCTestCase {
         
         struct SetDate {
             
-            func stringToDate (for date:String) -> Date {
+            func stringToDate (for date: String) -> Date {
                 let stringDate = date
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -36,8 +36,8 @@ class EpisodeTest: XCTestCase {
         let movieDate = date.stringToDate(for: "1982-12-13")
         let seriesDate = date.stringToDate(for: "2019-08-30")
         
-        let movie = Story(name: "The Dark Crystal", plot: PLOT_MOVIE, type: TYPE_OF_STORY.film, releaseDate:  movieDate, image: UIImage(named: "dark-cristal-movie.jpg")! )
-        serie = Story(name: "The Dark Crystal: Age of Resistance ", plot: PLOT_SERIES, type: TYPE_OF_STORY.serie, releaseDate: seriesDate ,  image: UIImage(named: "dark-cristal-series.jpg")!)
+        _ = Story(name: "The Dark Crystal", plot: PLOT_MOVIE, type: TYPE_OF_STORY.film, releaseDate: movieDate, image: UIImage(named: "dark-cristal-movie.jpg")! )
+        serie = Story(name: "The Dark Crystal: Age of Resistance ", plot: PLOT_SERIES, type: TYPE_OF_STORY.serie, releaseDate: seriesDate, image: UIImage(named: "dark-cristal-series.jpg")!)
         
         episode1 = Episode(name: "End. Begin. All the Same",
                            number: 1,
@@ -59,7 +59,7 @@ class EpisodeTest: XCTestCase {
         XCTAssertNotNil(episode1)
     }
     
-    func testEpisode()  {
+    func testEpisode() {
         XCTAssertEqual(episode1, episode1)
         
         let episode0 = Episode(name: "End. Begin. All the Same",

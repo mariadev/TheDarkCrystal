@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    var splitViewController:  UISplitViewController!
+    var splitViewController: UISplitViewController!
     
     var selectedViewControllerOnTabBar: UIViewController!
     
@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-
         
         let stories = RepositoryStory.local.stories
         let races = RepositoryCharacters.local.races
@@ -45,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         raceDetailViewControllerNavigation = raceDetailViewController.wrappedInNavigation()
         storiesDetailViewControllerNavigagion = storiesDetailViewController.wrappedInNavigation()
         
-        //Delegates
         storiesTableViewController.delegate = storiesDetailViewController
         raceTableViewController.delegate = raceDetailViewController
         
@@ -56,8 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 storiesTableViewController.delegate = storiesTableViewController
                 raceTableViewController.delegate = raceTableViewController
               }
-        
-        
+
         let tabBarController = UITabBarController()
         tabBarController.delegate = self
         tabBarController.viewControllers = [storiesTableViewController.wrappedInNavigation(), raceTableViewController.wrappedInNavigation()]
@@ -66,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Arial", size: 15)!], for: .selected)
         
         splitViewController = UISplitViewController()
-        splitViewController.preferredDisplayMode = .allVisible
+        splitViewController.preferredDisplayMode = .oneBesideSecondary
         splitViewController.viewControllers = [tabBarController, storiesDetailViewControllerNavigagion]
         
         window?.rootViewController =  splitViewController

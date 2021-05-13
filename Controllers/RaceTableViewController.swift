@@ -7,17 +7,16 @@
 
 import UIKit
 
-
 protocol RaceTableViewControllerDelegate: class {
     
-    func raceTableViewControllerDelegateFunc (_ viewController:RaceTableViewController, didSelectRace race: Race)
+ func raceTableViewControllerDelegateFunc (_ viewController: RaceTableViewController, didSelectRace race: Race)
     
 }
 
 class RaceTableViewController: UITableViewController {
     
     let model: [Race]
-    var delegate : RaceTableViewControllerDelegate?
+   weak var delegate: RaceTableViewControllerDelegate?
     
     init(model: [Race]) {
         self.model = model
@@ -28,7 +27,6 @@ class RaceTableViewController: UITableViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +43,6 @@ class RaceTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return model.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -85,7 +82,6 @@ class RaceTableViewController: UITableViewController {
         saveLastSelectedRace(at: indexPath.row)
     }
 }
-
 
 extension RaceTableViewController {
     func saveLastSelectedRace(at index: Int) {

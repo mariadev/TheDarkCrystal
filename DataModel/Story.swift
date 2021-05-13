@@ -11,8 +11,8 @@ typealias Episodes = Set<Episode>
 
 final class Story {
     let name: String
-    let plot : String
-    let type : String
+    let plot: String
+    let type: String
     let releaseDate: Date
     let image: UIImage
     var _episodes: Episodes
@@ -47,10 +47,8 @@ extension Story {
         return _episodes.sorted()
     }
 
-    
-    func add(episodes: Array<Episode>) {
-        episodes.forEach {
-        episode in
+    func add(episodes: [Episode]) {
+        episodes.forEach { episode in
             guard episode.story == self else { return}
             _episodes.insert(episode)
         }

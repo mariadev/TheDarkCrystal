@@ -21,22 +21,20 @@ class CharacterTest: XCTestCase {
                         description: DESCRIPTION_GELFLING )
         podlings = Race(name: OF_RACE.podlings,
                         description: DESCRIPTION_PODLINGS)
-        let skeksis  = Race(name: OF_RACE.skeksis,
+        _  = Race(name: OF_RACE.skeksis,
                             description: DESCRIPTION_SKEKSIS)
-        let aughra = Race(name: OF_RACE.aughra,
+        _ = Race(name: OF_RACE.aughra,
                           description: DESCRIPTION_AUGHRA)
-        let mystics = Race(name: OF_RACE.mystics,
+        _ = Race(name: OF_RACE.mystics,
                            description: DESCRIPTION_MYSTICS)
-        
-        
+
         rian = Character(name: RIAN_DATA.name,
                          race: gelfings,
-                         image: UIImage(named:RIAN_DATA.image)!,
+                         image: UIImage(named: RIAN_DATA.image)!,
                          description: RIAN_DATA.description,
                          appearOn: RIAN_DATA.appearOn,
                          aphorism: RIAN_DATA.aphorism)
-        
-        
+
         deet = Character(name: DEET_DATA.name,
                          race: gelfings,
                          image: UIImage(named: DEET_DATA.image)!,
@@ -59,12 +57,12 @@ class CharacterTest: XCTestCase {
         XCTAssertNotNil(rian)
     }
     
-    func testCharacter()  {
+    func testCharacter() {
         XCTAssertEqual(rian, rian)
         
         let rian2 = Character(name: RIAN_DATA.name,
                               race: gelfings,
-                              image: UIImage(named:RIAN_DATA.image)!,
+                              image: UIImage(named: RIAN_DATA.image)!,
                               description: RIAN_DATA.description,
                               appearOn: RIAN_DATA.appearOn,
                               aphorism: RIAN_DATA.aphorism)

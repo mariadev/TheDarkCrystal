@@ -20,21 +20,19 @@ final class Race {
         self.description = description
         _characters = Members()
     }
-    
-    
+
 }
 
 extension Race {
-    
-    
+
     func add(character: Character) {
         guard character.race == self else { return}
             _characters.insert(character)
         
     }
     
-    func add(characters : Character...) {
-        characters.forEach{add(character: $0)}
+    func add(characters: Character...) {
+        characters.forEach {add(character: $0)}
     }
 
 }
@@ -45,14 +43,13 @@ extension Race {
     }
 }
 
-
 extension Race: Hashable {
   func hash(into hasher: inout Hasher) {
      hasher.combine(proxyForEquality)
   }
 }
 
-extension Race : Equatable {
+extension Race: Equatable {
     static func == (lhs: Race, rhs: Race) -> Bool {
         return lhs.proxyForEquality == rhs.proxyForEquality
     }

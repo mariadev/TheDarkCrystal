@@ -29,7 +29,6 @@ class RaceDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         syncModelWithView()
@@ -41,8 +40,6 @@ class RaceDetailViewController: UIViewController {
         raceNameLabel.text = model.name
         descriptionRaceLabel.text = model.description
     }
-    
-
     
     func setUpUI() {
         
@@ -57,12 +54,12 @@ class RaceDetailViewController: UIViewController {
         let array = Array(model._characters.sorted())
         let charactersViewController = CharactersTableViewController(model: array)
         
-        navigationController?.pushViewController(charactersViewController , animated: true)
+        navigationController?.pushViewController(charactersViewController, animated: true)
     }
 
 }
 
-extension RaceDetailViewController : RaceTableViewControllerDelegate {
+extension RaceDetailViewController: RaceTableViewControllerDelegate {
     func raceTableViewControllerDelegateFunc(_ viewController: RaceTableViewController, didSelectRace race: Race) {
           self.model = race
         syncModelWithView()

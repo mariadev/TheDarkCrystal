@@ -5,7 +5,6 @@
 //  Created by Maria on 19/11/2020.
 //
 
-
 import UIKit
 
 extension UIViewController {
@@ -13,4 +12,3 @@ extension UIViewController {
         return UINavigationController(rootViewController: self)
     }
 }
-

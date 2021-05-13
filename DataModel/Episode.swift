@@ -7,12 +7,11 @@
 
 import Foundation
 
-
 final class Episode {
     
     let name: String
     let number: Int
-   weak var story : Story?
+   weak var story: Story?
     
     init(name: String, number: Int, story: Story) {
         self.name = name
@@ -21,7 +20,6 @@ final class Episode {
     }
     
 }
-
 
 extension  Episode {
     var proxyForEquality: String {
